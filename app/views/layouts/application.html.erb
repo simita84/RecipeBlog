@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipe Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+      <nav class="navbar navbar-fixed-top navbar-default">
+      <div class="container">
+        <ul  class="nav navbar-nav">
+          <li><%=link_to "Home","",id:"logo"%></li>
+          <li><%=link_to "Recipes","",id:"recipe"%></li>
+           <li><%=link_to "About","",id:"about"%></li>
+          <li><%=link_to "Contact","",id:"contact"%></li>
+        </ul>
+       </div>
+      </nav>
+  </header>
+  <div class="container">
+    <%= yield %>
+   <footer class="row">
+     Copyright @Simi Tresa Antony 2015
+   </footer>
+  </div>
+
+</body>
+</html>
